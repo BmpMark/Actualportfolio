@@ -1,0 +1,479 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family:'Times New Roman', Times, serif;
+    position:relative;
+}
+
+/*styles for the header */
+header {
+    width: 100%;
+    height: 80px;
+    background-color: aquamarine;
+    /* make header fixed */
+    position: fixed;
+    top: 0;
+    left: 0;
+
+    z-index: 3;
+    padding: 0px 40px;
+
+}
+
+/* styles for header container */
+header .header-container {
+    background-color: blueviolet;
+    /* arrange every immediate child horizontally */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /* set the max width */
+    max-width: 1172px;
+    margin: 0 auto;
+    padding: 0px 80px;
+}
+
+/*styles for logo wrapper */
+.logo-wrapper {
+    width: auto;
+    height: 80px;
+    line-height: 80px;
+}
+
+.logo-image-wrapper {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: inline-block;
+    margin-right: 8px;
+    /* align the logo vertically center within the parent height */
+    vertical-align: middle;
+}
+
+/* styles the logo text */
+.logo-wrapper .logo-text {
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: bold;
+    color: white;
+}
+
+/* styles the list containing navigation link */
+header .main-navbar ul {
+    /*arrange all links horizontally */
+    display: flex;
+    gap: 20px;
+    list-style: none;
+}
+
+/* styles the links */
+.main-navbar a {
+    text-decoration: none;
+    color: rgb(151, 147, 147);
+    font-weight: bold;
+    font-size: 18px;
+}
+
+/* style link on mouse over */
+.main-navbar a:hover {
+    color:#91ff4d;
+}
+
+/* styles for hamburger menu */
+.hamburger-menu {
+    /* initially hide the menu for larger devices */
+    display: none;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+
+    /* precisely arrange hamburger menu within navigation bar */
+    position:absolute;
+    right: 20px;
+    top: 30px;
+}
+
+/* styles for each bar of menu */
+.hamburger-menu .bar {
+    width: 20px;
+    height: 3px;
+    display: block;
+    margin-bottom: 4px;
+    background-color: white;
+}
+
+.hamburger-menu:hover .bar {
+    background-color: #ff4d71;
+}
+
+/* hide the checkbox, used for only to set style based on checkbox state */
+header input {
+    display: none;
+}
+
+/* styles for the home section */
+main.container {
+    width: 100%
+}
+
+/* styles for each section; there will be more sections */
+.container .section {
+    /* take height as recquired only*/
+    height: auto;
+    padding: 80px;
+
+    /* aligns the content to the center */
+    text-align: center;
+}
+
+/* add the background color in alternate odd sections; more sections will be added later */
+.container .section:nth-of-type(odd) {
+    background-color:rgb(241, 181, 109);
+}
+
+.section .section-content {
+    height: 100%;
+    /*sets the max-width same as the max-width of header container */
+    max-width: 1172px;
+
+    /*aligns horizontally center within the parent element */
+    margin: 0 auto;
+}
+
+/* home section style */
+.container .section-home {
+    background: rgb(21, 15, 65);
+    background: #84bcc6 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 80px;
+    min-height: calc(100vh - 80px);
+}
+
+/* style the heading  */
+.home-section-content h1 {
+    font-size: 36px;
+}
+
+.home-section-content .tag-line {
+    font-size: 24px;
+}
+
+/* styles the profile wrapper in home section */
+.profile-wrapper {
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+    margin: 30px auto;
+}
+
+/* styles the profile image */
+.profile-wrapper img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+/*styles the name within the home section*/
+.home-section-content h2 {
+    font-size: 32px;
+    margin: 8px;
+    color: white;
+    transition: all 0.5s ease;
+}
+
+/*styles applied on mouseover on icons */
+.social-icons-wrapper  .fab:hover {
+    color:cadetblue;
+}
+
+.container .section {
+    height: auto;
+    padding: 80px;
+    text-align: center;
+}
+
+.section .section-content {
+    height: 100%;
+    max-width: 1172px;
+    margin: 0 auto;
+}
+
+.section-content .section-heading {
+    font-size: 36px;
+    color: #150f41;
+    margin-bottom: 16px;
+}
+
+.section-content .section-tag-line {
+    font-size: 20px;
+    color: rgba(0, 0, 0, 0.74);
+}
+
+.section-about .section-tag-line {
+    color: #ff4d71;
+    font-size: 32px;
+}
+
+/* styles about introduction paragraph */
+.section-about p {
+    font-size: 22px;
+    width: 90%;
+    margin: 40px auto;
+}
+
+.experience-card-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 30px;
+    margin: 40px;
+}
+
+.experience-card {
+    width: 300px;
+    background-color: white;
+    border-radius: 12px;
+    padding: 12px 16px;
+}
+
+.experience-card .card-image-wrapper {
+    margin: 10px;
+}
+
+.experience-card li {
+    list-style: none;
+}
+
+.experience-card .list-heading {
+    font-weight: bold;
+    margin: 12px 8px;
+}
+
+/* keep earlier styles here */
+
+.project-card-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+    margin-top: 32px;
+}
+
+.project-card {
+    width: 300px;
+    height: 300px;
+
+    /* properties for background image */
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+
+    border-radius: 12px;
+    position: relative;
+    overflow: hidden;
+}
+
+/* set the background images for project cards */
+.project-card-1 {
+    background-image: url("https://img.freepik.com/premium-vector/online-shopping-digital-technology-with-icon-blue-background-ecommerce-online-store-marketing_252172-219.jpg");
+}
+
+.project-card-2 {
+    background-image: url("https://images.unsplash.com/photo-1522199755839-a2bacb67c546?q=80&w=2072&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
+}
+
+.project-card-3 {
+    background-image: url("https://images.unsplash.com/photo-1499750310107-5fef28a66643?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
+}
+
+.project-card-4 {
+    background-image: url("https://d3h2k7ug3o5pb3.cloudfront.net/image/2020-01-10/b7372130-3382-11ea-a700-a5080a3a032a.png");
+}
+
+.project-card-5 {
+    background-image: url("https://img.freepik.com/premium-vector/creative-horizontal-website-screen-part-responsive-web-design-project-development-abstract-geometric-pattern-banner-layout-mock-up-corporate-landing-page-block-vector-illustration-template_181182-13902.jpg?w=2000");
+}
+
+.project-card-6 {
+    background-image: url("https://img.freepik.com/premium-photo/responsive-design-e-magazine-website-devices-isolated-white-background-3d-rendering-mockup_72104-3724.jpg");
+}
+
+.project-card p {
+    width: 100%;
+    height: 100%;
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.762);
+    color: black;
+    font-weight: bold;
+    position: absolute;
+    opacity: 0;
+    transition: all 0.4s ease;
+}
+
+/* show the project card description while hovering */
+.project-card:hover p {
+    opacity: 1;
+}
+
+/* keep earlier styles here */
+
+/* styles the form element */
+form {
+    background-color: white;
+    border-radius: 12px;
+    text-align: left;
+    padding: 40px 0px;
+}
+
+/* styles the wrapper enclosing input fields and textarea */
+.form-fields-wrapper {
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+    gap: 50px;
+}
+
+form .input-box,
+form .message-box {
+    width: 50%;
+}
+
+/* styles the form label */
+form label {
+    display: block;
+    font-size: 20px;
+    margin: 8px 0px;
+}
+
+/* styles the input fields and textarea field */
+form input,
+textarea {
+    width: 100%;
+    padding: 8px;
+    font-size: 18px;
+}
+
+/* styles the form submit button */
+form button {
+    display: block;
+    width: 160px;
+    margin: 0 auto;
+    font-size: 18px;
+    background-color: #150f41;
+    color: white;
+    padding: 12px;
+    border: none;
+    cursor: pointer;
+    border-radius: 8px;
+    transition: 0.5s ease;
+}
+
+/* changes the button background color while hovering */
+form button:hover {
+    background-color: #ff4d71;
+}
+
+/* keep earlier styles here */
+
+/* styles the footer */
+footer {
+    background-color: #150f41;
+    height: 40px;
+    color: white;
+}
+
+/* styles the footer container */
+footer .footer-container {
+    line-height: 40px;
+    max-width: 1172px;
+
+    /* arranges the footer in center */
+    margin: 0 auto;
+    text-align: center;
+    font-size: 18px;
+}
+
+/* styles the heart icon */
+footer .heart-icon {
+    color: red;
+}
+
+/* trigger the styles at width of 756px */
+@media screen and (max-width: 756px) {
+    header .header-container {
+        padding: 0px 40px;
+    }
+
+    /* show the hamburger menu */
+    .hamburger-menu {
+        display: block;
+    }
+
+    header .main-navbar ul {
+        /* initially hide the navigation menu */
+        display: none;
+
+        padding: 40px;
+        position: absolute;
+        top: 80px;
+        left: 0px;
+        width: 100%;
+        height: 70vh;
+        text-align: center;
+        background-color: rgb(25, 17, 83);
+        transition: all 1s ease;
+    }
+
+    /* show the navigation menu while clicking on hamburger menu */
+    header input:checked ~ .main-navbar ul {
+        display: block;
+    }
+
+    /* add margin to bottom of each list item */
+    header .main-navbar ul li {
+        margin-bottom: 20px;
+    }
+
+    /* change the flex-direction from row to column to stack cards on top of each other */
+    .experience-card-wrapper,
+    .project-card-wrapper {
+        flex-direction: column;
+    }
+
+    /* increase the width to occupy full width */
+    .experience-card {
+        width: 100%;
+        padding: 40px;
+    }
+
+    /* increase the width to occupy full width */
+    .project-card {
+        width: 100%;
+    }
+
+    /* stack the form fields on top of each other */
+    .form-fields-wrapper {
+        flex-direction: column;
+        padding: 20px;
+    }
+
+    /* set the width to 100% taking full width */
+    .message-box,
+    .input-box {
+        min-width: 100%;
+    }
+
+    /* set the padding of each section; top / bottom to 80px and left / right to 20px */
+    .container .section {
+        padding: 80px 20px;
+    }
+}
